@@ -38,5 +38,5 @@ TASK_3_QUERY = """
 SELECT count(*) FROM flights;
 """
 #  count
-# --------
+# -------
 #  16824
