@@ -23,7 +23,7 @@ TASK_2_QUERY = """
 SELECT flight_no, count(*)
 FROM flights
 GROUP BY flight_no
-HAVING count(*) < 50
+HAVING count(*) = 27
 ORDER BY flight_no ASC
 LIMIT 3;
 """
