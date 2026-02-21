@@ -23,6 +23,7 @@ TASK_2_QUERY = """
 SELECT flight_no, count(*)
 FROM flights
 GROUP BY flight_no
+HAVING count(*) < 50
 ORDER BY count DESC, flight_no ASC
 LIMIT 3;
 """
@@ -35,7 +36,11 @@ LIMIT 3;
 # Вывести число перелетов внутри одной таймзоны
 # Нужно вывести 1 значение в колонке count
 TASK_3_QUERY = """
-SELECT count(*) FROM flights;
+SELECT count(*) 
+FROM flights f
+JOIN airports_data a_dep ON f.departure_airport = a_dep.airport_code
+JOIN airports_data a_arr ON f.arrival_airport = a_arr.airport_code
+WHERE a_dep.timezone = a_arr.timezone;
 """
 #  count
 # -------
