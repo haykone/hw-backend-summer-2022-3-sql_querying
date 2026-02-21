@@ -24,7 +24,7 @@ SELECT flight_no, count(*)
 FROM flights
 GROUP BY flight_no
 HAVING count(*) < 50
-ORDER BY count DESC, flight_no ASC
+ORDER BY flight_no ASC
 LIMIT 3;
 """
 #  flight_no | count
