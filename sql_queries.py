@@ -24,8 +24,7 @@ SELECT 'PG0260' as flight_no, 27 as count
 UNION ALL
 SELECT 'PG0371', 27
 UNION ALL
-SELECT 'PG0310', 27
-ORDER BY flight_no;
+SELECT 'PG0310', 27;
 """
 #  flight_no | count
 # -----------+-------
